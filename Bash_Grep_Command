@@ -1,0 +1,34 @@
+Regex Operator
+1     . = Represent one of any chracter
+2     ? = Represents zero or one of whatever precedes it
+3     + = Represents one or more of whatever precedes it
+4     * = Represents zero or more of whatever precedes it
+5    () = Used for grouping  
+6    {} = Used for counting
+7    ^  = Begining of the line
+8    $  = End of the line
+9    abc = Represent the text "abc"
+10  [a-z] = Represent one of any chracter in the set a-z
+11  [a-zA-Z] = Represent any Latin chracter(lower  and upeercase)
+12  [0-9] = Represent any number 0-9
+Practical Part with "grep", it works as standard text search
+grep with-E option it match the text part
+file name is textfile
+content of the file
+"this text file
+has a few lines
+that take up 
+a little bit of space"
+
+$ grep -E "t." textfile
+$ grep -E ".t" textfile 
+O/P - match any combination of chracter followed by T
+$ grep -E "t.*" textfile
+O/P - T followed by zero or more of any chracter 
+$ grep -E "t.*t" textfile
+$ grep -E "[t-z]" textfile = match chracter between t to z
+$ grep -E "[t-z]{2}" textfile = match 2 chracter between t to z 
+
+
+
+
